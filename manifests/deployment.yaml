@@ -15,5 +15,3 @@ spec:
       containers:
         - name: scheduler
           image: elygo/101-scheduler-kube
-
-# kubectl apply -f ...deployment.yaml
