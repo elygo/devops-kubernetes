@@ -15,3 +15,5 @@ spec:
       containers:
         - name: scheduler
           image: elygo/101-scheduler-kube
+          ports:
+            - containerPort: 8080
