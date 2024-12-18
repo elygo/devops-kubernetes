@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: todo
-          image: elygo/102-todo-kube
+          image: elygo/105-todo-kube
           ports:
             - containerPort: 8080
           env:
