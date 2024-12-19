@@ -4,20 +4,20 @@ metadata:
   name: scheduler-pong-ingress
 spec:
   rules:
-    - host: localhost
-      http:
-        paths:
-          - path: /pong
-            pathType: Prefix
-            backend:
-              service:
-                name: pong
-                port:
-                  number: 2345
-          - path: /status
-            pathType: Prefix
-            backend:
-                service:
-                  name: scheduler
-                  port:
-                    number: 2345
+  - host: localhost
+    http:
+      paths:
+        - path: /pong
+          pathType: Prefix
+          backend:
+            service:
+              name: pong
+              port:
+                number: 2345
+        - path: /status
+          pathType: Prefix
+          backend:
+            service:
+              name: scheduler
+              port:
+                number: 2345
