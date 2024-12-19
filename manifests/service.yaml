@@ -1,12 +1,12 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: todo
+  name: pong
 spec:
   type: ClusterIP
   selector:
-    app: todo
+    app: pong
   ports:
     - port: 2345
       protocol: TCP
-      targetPort: 8080
+      targetPort: 8090

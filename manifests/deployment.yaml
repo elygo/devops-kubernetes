@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: todo-deployment
+  name: pong-deployment
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: todo
+      app: pong
   template:
     metadata:
       labels:
-        app: todo
+        app: pong
     spec:
       containers:
-        - name: todo
-          image: elygo/105-todo-kube
+        - name: pong
+          image: elygo/109-pong-ingress
           ports:
-            - containerPort: 8080
+            - containerPort: 8090
           env:
             - name: PORT
-              value: "8080"
+              value: "8090"

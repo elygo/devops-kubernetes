@@ -4,12 +4,19 @@ metadata:
   name: dwk-material-ingress
 spec:
   rules:
-    - http:
+    - host:
         paths:
-          - path: /
+          - path: /pong
             pathType: Prefix
             backend:
               service:
-                name: todo
+                name: pong
                 port:
                   number: 2345
+          - path: /status
+            pathType: Prefix
+            backend:
+                service:
+                  name: scheduler
+                  port:
+                    number: 2345
